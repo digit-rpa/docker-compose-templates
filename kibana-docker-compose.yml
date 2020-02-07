@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+
+  elasticsearch:
+    image: elasticsearch:7.3.1
+    container_name: ELASTICSEARCH_CONTAINER_NAME
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports: 
+      - ELASTICSEARCH_OUTSIDE_PORT:9200
+    networks:
+      - web
+      - default
+    volumes:
+      - ./esdata:/usr/share/elasticsearch/data
+
+  kibana:
+    image: kibana:7.3.1
+    container_name: KIBANA_CONTAINER_NAME
+    expose: 
+      - "KIBANA_OUTSIDE_PORT"
+    environment:
+      VIRTUAL_HOST: KIBANA_VIRTUAL_HOSTNAME
+      VIRTUAL_PORT: KIBANA_OUTSIDE_PORT
+      ELASTICSEARCH_URL: "http://elalsticsearch:9200"
+    ports:
+      - KIBANA_OUTSIDE_PORT:5601
+    depends_on:
+      - elasticsearch
+    networks:
+      - web
+      - default
+
+networks:
+  web:
+    external: true
