@@ -1,0 +1,4 @@
+{
+    "description": "Intall Elasticsearch and Kibana",
+    "installation-script-path": "/var/www/html/installation.php"
+}
