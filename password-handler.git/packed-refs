@@ -1,7 +1,0 @@
-# pack-refs with: peeled fully-peeled sorted 
-c4b9357c38b944ab63df734aac661cc1a96c5e3e refs/heads/autogenerate_strong_password
-89ac105b0f95baa2d34604f2f726bddfd3d48bd7 refs/heads/frontpage_view
-9f98cf645fa991b7f261f5f871b1c03fe0dacf2a refs/heads/master
-0d8f61a8409ec5f2145689e401509fa3b582016d refs/heads/prepare_database
-501ca41c8f399aa00318c06df4eda00d50f4dedd refs/heads/two_factor
-875697096bddffc3e3eaf4de918072bde0d84911 refs/heads/with_port
