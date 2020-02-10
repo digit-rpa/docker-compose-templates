@@ -1,6 +1,6 @@
 {
     "description": "Intall Elasticsearch and Kibana",
-    "installation-script-path": "/var/www/html/installation.php",
+    "installation-script-path": "",
     "options": [
         {
             "ELASTICSEARCH_CONTAINER_NAME": "",
