@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  web:
+    container_name: password_handler_web
+    build: .
+    restart: always
+    environment:
+     - VIRTUAL_HOST=${VIRTUAL_HOST}
+    networks:
+     - web
+     - default
+    volumes:
+      - "./:/var/www/html/"
+      - "./docker-files/apache.conf:/etc/apache2/sites-available/000-default.conf"
+
+  db:
+    container_name: password_handler_db
+    image: mysql:5.7.28
+    restart: always
+    networks:
+      - web
+      - default
+    volumes:
+      - "./dbdata:/var/lib/mysql"
+    environment:
+      MYSQL_USER: ${DB_USERNAME} 
+      MYSQL_PASSWORD: ${DB_PASSWORD} 
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    env_file:
+      - .env
+    ports:
+      - "VIRTUAL_HOST_VALUE:${DB_PORT}"
+        
+networks:
+  web:
+    external: true
