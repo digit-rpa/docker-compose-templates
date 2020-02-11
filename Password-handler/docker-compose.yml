@@ -31,7 +31,7 @@ services:
     env_file:
       - .env
     ports:
-      - "VIRTUAL_HOST_VALUE:${DB_PORT}"
+      - "DB_OUTSIDE_PORT:${DB_PORT}"
         
 networks:
   web:
