@@ -6,7 +6,8 @@
         {
             "VIRTUAL_HOST_VALUE": "ps.local",
             "DB_OUTSIDE_PORT": "33062",
-            "CONTAINER_NAME_VALUE": "password_handler_web"
+            "CONTAINER_NAME_VALUE": "password_handler_web",
+            "DATABASE_ROOT_PASSWORD_VALUE": "OWLJOI4H6R"
         }
     ]
 }
