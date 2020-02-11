@@ -5,7 +5,8 @@
     "options": [
         {
             "VIRTUAL_HOST_VALUE": "ps.local",
-            "DB_OUTSIDE_PORT": "33062"
+            "DB_OUTSIDE_PORT": "33062",
+            "CONTAINER_NAME_VALUE": "password_handler_web"
         }
     ]
 }
