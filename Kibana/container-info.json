@@ -3,11 +3,11 @@
     "installation-script-path": "",
     "options": [
         {
-            "ELASTICSEARCH_CONTAINER_NAME": "",
-            "ELASTICSEARCH_OUTSIDE_PORT": "",
-            "KIBANA_CONTAINER_NAME": "",
-            "KIBANA_VIRTUAL_HOSTNAME": "", 
-            "KIBANA_OUTSIDE_PORT": ""
+            "ELASTICSEARCH_CONTAINER_NAME": "elasticsearch",
+            "ELASTICSEARCH_OUTSIDE_PORT": "9200",
+            "KIBANA_CONTAINER_NAME": "kibana",
+            "KIBANA_VIRTUAL_HOSTNAME": "kibana.local", 
+            "KIBANA_OUTSIDE_PORT": "5601"
         }
     ]
 }
