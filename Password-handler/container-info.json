@@ -2,6 +2,7 @@
     "description": "Install Password Handler powered by Laravel",
     "installation-script-path": "/var/www/html/installation.php",
     "website-repository-zip": "https://github.com/Mic2/password-handler/archive/master.zip",
+    "using-external-network": true,
     "options": [
         {
             "VIRTUAL_HOST_VALUE": "ps.local",

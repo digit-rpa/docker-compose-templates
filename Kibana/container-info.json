@@ -1,6 +1,6 @@
 {
     "description": "Intall Elasticsearch and Kibana",
-    "installation-script-path": "",
+    "using-external-network": true,
     "options": [
         {
             "ELASTICSEARCH_CONTAINER_NAME": "elasticsearch",
