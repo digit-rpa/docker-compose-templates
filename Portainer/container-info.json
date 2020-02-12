@@ -1,0 +1,11 @@
+{
+    "description": "Installing Portainer wich is web application for monitoring your docker containers",
+    "using-external-network": true,
+    "options": [
+        {
+            "VIRTUAL_HOST_VALUE": "portainer.local",
+            "DB_OUTSIDE_PORT": "9400",
+            "CONTAINER_NAME_VALUE": "portainer"
+        }
+    ]
+}

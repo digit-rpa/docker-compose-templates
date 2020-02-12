@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  portainer:
+    container_name: CONTAINER_NAME_VALUE
+    restart: always
+    image: portainer/portainer
+    volumes:
+     - //var/run/docker.sock:/var/run/docker.sock
+     - ./portainer_data:/data
+    environment:
+      VIRTUAL_HOST: VIRTUAL_HOST_VALUE
+    ports:
+      - DB_OUTSIDE_PORT:9000
+    networks:
+     - web
+     - default
+
+networks:
+  web:
+    external: true

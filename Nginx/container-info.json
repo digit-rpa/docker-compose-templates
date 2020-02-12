@@ -1,9 +1,9 @@
 {
     "description": "Intall Nginx",
-    "installation-script-path": "",
+    "using-external-network": true,
     "options": [
         {
-            
+             
         }
     ]
 }
