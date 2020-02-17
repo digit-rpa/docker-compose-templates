@@ -2,7 +2,7 @@ version: '3'
 
 services:
   web:
-    container_name: CONTAINER_NAME_VALUE
+    container_name: WEB_CONTAINER_NAME_VALUE
     build: .
     restart: always
     environment:
