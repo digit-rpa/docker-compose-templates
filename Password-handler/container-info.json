@@ -5,10 +5,18 @@
     "using-external-network": true,
     "options": [
         {
-            "VIRTUAL_HOST_VALUE": "ps.local",
-            "DB_OUTSIDE_PORT": "33062",
-            "CONTAINER_NAME_VALUE": "password_handler_web",
-            "DATABASE_ROOT_PASSWORD_VALUE": "OWLJOI4H6R"
+            "WEB_CONTAINER_NAME_VALUE": "password_handler_web",
+            "DB_CONTAINER_NAME_VALUE": "password_handler_db",
+            "DB_OUTSIDE_PORT": "33062"
+        }
+    ],
+    "environment-variables": [
+        {
+            "VIRTUAL_HOST": "ps.local",
+            "DB_USERNAME": "ps-user",
+            "DB_PASSWORD": "BQRNXEP6KJ",
+            "DB_ROOT_PASSWORD": "OWLJOI4H6R",
+            "DB_DATABASE": "password-handler"
         }
     ]
 }

@@ -17,7 +17,7 @@ services:
       - db
 
   db:
-    container_name: password_handler_db
+    container_name: DB_CONTAINER_NAME_VALUE
     image: mysql:5.7.28
     restart: always
     networks:
@@ -29,7 +29,7 @@ services:
       MYSQL_USER: ${DB_USERNAME} 
       MYSQL_PASSWORD: ${DB_PASSWORD} 
       MYSQL_DATABASE: ${DB_DATABASE}
-      MYSQL_ROOT_PASSWORD: DATABASE_ROOT_PASSWORD_VALUE
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
     env_file:
       - .env
     ports:
